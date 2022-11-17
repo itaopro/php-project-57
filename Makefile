@@ -4,8 +4,6 @@ setup:
 	composer install
 	cp -n .env.example .env
 	php artisan key:gen --ansi
-	npm ci
-	npm run build
 lint:
 	composer exec phpcs -- --standard=PSR12 app routes tests
 
