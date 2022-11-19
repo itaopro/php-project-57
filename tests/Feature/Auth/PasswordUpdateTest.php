@@ -1,5 +1,6 @@
 <?php
 
+/*
 namespace Tests\Feature\Auth;
 
 use App\Models\User;
@@ -49,3 +50,4 @@ class PasswordUpdateTest extends TestCase
             ->assertRedirect('/profile');
     }
 }
+*/
