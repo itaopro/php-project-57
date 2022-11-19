@@ -14,9 +14,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::view('/', 'welcome')->name('welcome');
+
+Route::resource('tasks', UrlController::class)->only('index', 'store', 'show');
+
+Route::resource('labels', UrlCheckController::class)->only('store');
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
