@@ -65,3 +65,4 @@ class ProfileController extends Controller
         return Redirect::to('/');
     }
 }
+\Log::debug('Тестовое отладочное сообщение');
