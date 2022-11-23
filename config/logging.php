@@ -34,7 +34,7 @@ return [
         'channel' => env('LOG_DEPRECATIONS_CHANNEL', 'null'),
         'trace' => false,
     ],
-    
+
     'rollbar' => [
         'driver' => 'monolog',
         'handler' => \Rollbar\Laravel\MonologHandler::class,
@@ -60,7 +60,7 @@ return [
     'channels' => [
         'stack' => [
             'driver' => 'stack',
-            'channels' => ['single'],
+            'channels' => ['rollbar', 'single'],
             'ignore_exceptions' => false,
         ],
 

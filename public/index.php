@@ -2,8 +2,6 @@
 
 use Illuminate\Contracts\Http\Kernel;
 use Illuminate\Http\Request;
-use \Rollbar\Rollbar;
-use \Rollbar\Payload\Level;
 
 define('LARAVEL_START', microtime(true));
 
@@ -55,10 +53,3 @@ $response = $kernel->handle(
 )->send();
 
 $kernel->terminate($request, $response);
-
-Rollbar::init(
-    array(
-        'access_token' => '400a122f12ea418281d965f1d5d600f2',
-        'environment' => 'production'
-    )
-);
