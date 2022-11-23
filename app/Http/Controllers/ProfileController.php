@@ -61,8 +61,7 @@ class ProfileController extends Controller
 
         $request->session()->invalidate();
         $request->session()->regenerateToken();
-
+        \Log::debug('Тестовое отладочное сообщение');
         return Redirect::to('/');
     }
 }
-\Log::debug('Тестовое отладочное сообщение');
