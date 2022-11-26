@@ -16,9 +16,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'welcome')->name('welcome');
 
-Route::resource('tasks', UrlController::class)->only('index', 'store', 'show');
+Route::resource('task_statuses', TaskStatuses::class)->only('add', 'edit');
 
 Route::resource('labels', UrlCheckController::class)->only('store');
+
+Route::resource('tasks', UrlCheckController::class)->only('store');
 
 
 Route::get('/dashboard', function () {

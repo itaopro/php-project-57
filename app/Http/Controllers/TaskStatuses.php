@@ -13,7 +13,7 @@ class TaskStatuses extends Controller
      */
     public function index()
     {
-        //
+        return view('tasks');
     }
 
     /**
