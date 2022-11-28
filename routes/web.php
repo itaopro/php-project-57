@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\TaskStatuses;
+use App\Http\Controllers\TaskStatusController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,8 +17,9 @@ use App\Http\Controllers\TaskStatuses;
 
 Route::view('/', 'welcome')->name('welcome');
 
-Route::resource('task_statuses', TaskStatuses::class)->only('index');
-
+Route::resources([
+    'task_statuses' => TaskStatusController::class,
+]);
 
 
 Route::get('/dashboard', function () {
