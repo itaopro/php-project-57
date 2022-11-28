@@ -23,7 +23,7 @@ class TaskStatuses extends Controller
      */
     public function create()
     {
-        //
+        
     }
 
     /**
@@ -34,7 +34,7 @@ class TaskStatuses extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
     }
 
     /**

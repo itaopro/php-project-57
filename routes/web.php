@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TaskStatuses;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,11 +17,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'welcome')->name('welcome');
 
-Route::resource('task_statuses', TaskStatuses::class)->only('add', 'edit');
+Route::resource('task_statuses', TaskStatuses::class)->only('index');
 
-Route::resource('labels', UrlCheckController::class)->only('store');
-
-Route::resource('tasks', UrlCheckController::class)->only('store');
 
 
 Route::get('/dashboard', function () {
